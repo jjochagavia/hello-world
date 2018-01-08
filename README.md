@@ -12,7 +12,19 @@ Siempre usar include en el mysite/urls, la excepcion es el del admin
 
 MODIFICAR URLs según esto, no tutorial. Problema de versiones de django
 
-in polls/urls.py
+in mysite/urls.py tener:
+
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+url(r'^polls/', include('polls.urls')),
+url(r'^admin/', admin.site.urls),
+]
+
+y luego, según corresponda para la app:
+
+app/urls.py tener:
 
 from django.conf.urls import url
 from django.conf.urls import include
@@ -22,6 +34,7 @@ from . import views
 urlpatterns = [
   url(r'^$', views.index, name='index'),
 ]
+
 
 three-step guide to making model changes:
 
