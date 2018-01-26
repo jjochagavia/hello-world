@@ -1,6 +1,6 @@
 # hello-world
-
-TUTORIAL DJANGO
+#Hola de nuevo
+TUTORIAL DJANGO prueba 2
 
 Ojo con esto:
 Now’s a good time to note: don’t use this server in anything resembling a production environment. 
